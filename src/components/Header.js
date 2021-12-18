@@ -16,7 +16,7 @@ function Header() {
                 navbarScroll
               >
                 <Nav.Link href="#action1"> <i className="fas fa-shopping-cart"></i> Cart</Nav.Link>
-                <Nav.Link href="#action2">Login</Nav.Link>
+                <Nav.Link href="#action2"><i className="fas fa-user"></i>Login</Nav.Link>
                 <Nav.Link href="#" disabled>
                   Link
                 </Nav.Link>
