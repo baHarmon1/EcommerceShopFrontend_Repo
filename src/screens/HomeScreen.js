@@ -5,6 +5,7 @@ import Product from "../components/Product";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import { listProducts } from "../actions/productActions";
+import EmbeddedMap from "../components/EmbeddedMap";
 
 function HomeScreen() {
   const dispatch = useDispatch();
@@ -28,6 +29,9 @@ function HomeScreen() {
               <Product product={product} />
             </Col>
           ))}
+          <Col>
+          <EmbeddedMap/>
+          </Col>
         </Row>
       )}
     </div>
