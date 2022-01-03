@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../components/Loader";
@@ -11,7 +11,8 @@ function LoginScreen({ history }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   const redirect = window.location.search
     ? window.location.search.split("=")[1]
@@ -22,18 +23,19 @@ function LoginScreen({ history }) {
 
   useEffect(() => {
     if (userInfo) {
-      history.push(redirect);
+      navigate(redirect);
     }
-  }, [history, userInfo, redirect]);
+  }, [userInfo, redirect]);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log('submitted')
     dispatch(login(email, password));
   };
   return (
     <FormContainer>
       <h1>Sign In</h1>
+      {error && <Message variant='danger'>{error}</Message>}
+      {loading && <Loader/>}
 
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="email">
