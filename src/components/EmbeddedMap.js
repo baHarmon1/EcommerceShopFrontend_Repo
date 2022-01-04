@@ -7,8 +7,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: -3.745,
-  lng: -38.523
+  lat: 35.38032645932714,
+  lng: -97.53052069733864
 };
 
 function EmbeddedMap() {
@@ -33,7 +33,7 @@ function EmbeddedMap() {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={10}
+        zoom={17}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >

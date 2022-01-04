@@ -29,9 +29,14 @@ function HomeScreen() {
               <Product product={product} />
             </Col>
           ))}
-          <Col>
+          <Row>
+            <h3>About Us</h3>
+            <p>Fusce dapibus ex augue, vel tempor mi congue vitae. Nullam molestie dignissim leo vel consectetur. Nulla id augue eu magna consectetur mattis at eu erat. Praesent ac mattis turpis, sed accumsan eros. Sed ac tellus nisi. Nunc tellus diam, bibendum eu mattis vel, porttitor eget mauris. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam quis dictum ligula. Morbi risus felis, tempus vitae magna in, ullamcorper fringilla tortor. Etiam in ipsum cursus, egestas ipsum vel, faucibus velit. Maecenas rutrum efficitur venenatis. Sed nibh enim, maximus ut ultricies quis, iaculis sit amet nisl. Donec lobortis malesuada eros et rutrum. Nullam mauris urna, rhoncus non aliquam ac, aliquet sit amet justo. Sed sagittis maximus dui, feugiat malesuada arcu varius quis.</p>
+            <p>Reach out to us by calling (405)616-5233 or emailing ThisCompany@gmail.com</p>
+          </Row>
+          <Row>
           <EmbeddedMap/>
-          </Col>
+          </Row>
         </Row>
       )}
     </div>

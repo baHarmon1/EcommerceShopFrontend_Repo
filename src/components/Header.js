@@ -3,16 +3,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { Navbar, Nav, Container, Row, NavDropdown } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
-import { logout } from '../actions/userActions'
+import SearchBox from "./SearchBox";
+import { logout } from "../actions/userActions";
 
 function Header() {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const logoutHandler = () => {
-    dispatch(logout())
-  }
+    dispatch(logout());
+  };
   return (
     <div>
       <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
@@ -22,6 +23,7 @@ function Header() {
           </LinkContainer>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
+            <SearchBox />
             <Nav
               className="mr-auto my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
