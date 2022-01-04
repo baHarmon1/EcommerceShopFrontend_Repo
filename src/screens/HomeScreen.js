@@ -6,15 +6,21 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import { listProducts } from "../actions/productActions";
 import EmbeddedMap from "../components/EmbeddedMap";
+import { useNavigate, useHistory } from "react-router-dom";
+
 
 function HomeScreen() {
   const dispatch = useDispatch();
+  const navigate = useNavigate
   const productList = useSelector((state) => state.productList);
   const { error, loading, products } = productList;
 
+  let keyword = window.location.search // Issue with having to reload page to get the keyword to take effect
+  console.log(keyword)
+
   useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+    dispatch(listProducts(keyword));
+  }, [dispatch, keyword]);
 
   return (
     <div>
