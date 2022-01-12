@@ -8,7 +8,7 @@ const containerStyle = {
 
 const center = {
   lat: 35.38032645932714,
-  lng: -97.53052069733864
+  lng: -97.53052069733864,
 };
 
 function EmbeddedMap() {
