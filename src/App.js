@@ -9,6 +9,7 @@ import RegisterScreen from "./screens/RegisterScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import ShippingScreen from "./screens/ShippingScreen";
 import UserListScreen from "./screens/UserListScreen";
+import ProductListScreen from "./screens/ProductListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
 
 function App() {
@@ -24,8 +25,11 @@ function App() {
           <Route path='/profile' element={<ProfileScreen />}  />
           <Route path='/shipping' element={<ShippingScreen />}  />
           <Route path='/product/:id' element={<ProductScreen />}/>
+
           <Route path='/admin/userlist' element={<UserListScreen />}/>
           <Route path='/admin/user/:id/edit' element={<UserEditScreen />}/>
+
+          <Route path='/admin/productlist' element={<ProductListScreen />}/>
           </Routes>
         </Container>
       </main>
